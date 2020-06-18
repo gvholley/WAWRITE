@@ -14,6 +14,41 @@
 @import "variables";
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
 h1 {
   font-family: 'Raleway', sans-serif;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  background-size: 100%, 100%;
+  background-image: none;
+  align-self: flex-end;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 32px;
+  color: gray;
+
+
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 32px;
+  color: gray;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 30vw;
+    object-fit: cover;
+}
+
+.card {
+  margin-bottom: 10px;
 }
