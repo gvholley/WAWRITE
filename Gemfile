@@ -22,6 +22,7 @@ gem 'redis', '~> 4.0'
 gem 'money-rails', '~>1.12'
 gem 'stripe'
 gem 'stripe_event'
+gem 'acts-as-taggable-on', '~> 6.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
