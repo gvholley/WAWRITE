@@ -18,8 +18,16 @@ hb.save
 us = Product.create!(price_cents: 499, sku: 'stylefit', name: 'Uni Style Fit', category: pen, photo_url: 'https://images-na.ssl-images-amazon.com/images/I/91pvFXzZclL._AC_SL1500_.jpg')
 us.tag_list.add("Pen")
 us.save
-Product.create!(price_cents: 1999, sku: 'apica', name: 'Apica Three Year Diary', category: diary, photo_url: 'https://i.imgur.com/YIKiPXQ.jpg')
-Product.create!(price_cents: 299, sku: 'bande', name: 'Bande Masking Tape', category: tape, photo_url: 'https://images-na.ssl-images-amazon.com/images/I/61gkkdsMaIL._AC_SL1500_.jpg')
-Product.create!(price_cents: 999, sku: 'pilot', name: 'Pilot Vanishing Point Fountain Pen', category: pen, photo_url: 'https://themartinj.com/wp-content/uploads/2017/03/pen4.jpg')
-Product.create!(price_cents: 199, sku: 'mt', name: 'MT Casa', category: tape, photo_url: 'https://www.masking-tape.jp/en/common/images/lineup/special/casa/mtcasashade/sizemainimg2.jpg')
+ap = Product.create!(price_cents: 1999, sku: 'apica', name: 'Apica Three Year Diary', category: diary, photo_url: 'https://i.imgur.com/YIKiPXQ.jpg')
+ap.tag_list.add("Diary")
+ap.save
+bnd = Product.create!(price_cents: 299, sku: 'bande', name: 'Bande Masking Tape', category: tape, photo_url: 'https://images-na.ssl-images-amazon.com/images/I/61gkkdsMaIL._AC_SL1500_.jpg')
+bnd.tag_list.add("Tape")
+bnd.save
+plt = Product.create!(price_cents: 999, sku: 'pilot', name: 'Pilot Vanishing Point Fountain Pen', category: pen, photo_url: 'https://themartinj.com/wp-content/uploads/2017/03/pen4.jpg')
+plt.tag_list.add("Pen")
+plt.save
+mtc = Product.create!(price_cents: 199, sku: 'mt', name: 'MT Casa', category: tape, photo_url: 'https://www.masking-tape.jp/en/common/images/lineup/special/casa/mtcasashade/sizemainimg2.jpg')
+mtc.tag_list.add("Tape")
+mtc.save
 puts 'Finished!'
