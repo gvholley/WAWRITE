@@ -11,10 +11,14 @@
       <%= hidden_field_tag 'product_id', @product.id %>
       <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
 <% end %>
+<div class="tag">
+<p>Find more in
 <% @product.tag_list.each do |tag| %>
           <%= link_to tag, tagged_path(tag: tag) %>
 
         <% end %>
+      </p>
+    </div>
     </div>
   </div>
 </div>
