@@ -42,7 +42,13 @@
         <div class="card-body">
           <h5 class="card-title"><%= product.name %></h5>
           <p><%= humanized_money_with_symbol(product.price) %></p>
-          <p class="card-text"><%= product.category.name %></p>
+          <p class="card-text">
+            <div class='tag'>
+        <% product.tag_list.each do |tag| %>
+          <%= link_to tag, tagged_path(tag: tag) %>
+        <% end %>
+      </div>
+          </p>
           <%= link_to "More details", product_path(product), class: "btn btn-primary" %>
         </div>
       </div>
