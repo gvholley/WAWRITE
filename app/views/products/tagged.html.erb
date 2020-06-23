@@ -1,6 +1,8 @@
+<div class="container mt-3">
 <div class="row">
     <% @products.each do |product| %>
-    <div class="col-6 col-md-4 ml-2 mt-2">
+
+    <div class="col-6 col-md-4">
       <%= link_to product_path(product) do %>
       <div class="card">
         <%= image_tag product.photo_url , class: "card-img-top" %>
@@ -8,10 +10,17 @@
         <div class="card-body">
           <h5 class="card-title"><%= product.name %></h5>
           <p><%= humanized_money_with_symbol(product.price) %></p>
-          <p class="card-text"><%= product.category.name %></p>
-          <%= link_to "More details", product_path(product), class: "btn btn-primary" %>
+          <p class="card-text">
+            <div class='tag'>
+              <% product.tag_list.each do |tag| %>
+              <%= link_to tag, tagged_path(tag: tag) %>
+              <% end %>
+            </div>
+          </p>
+          <%= link_to "More details", product_path(product), class: "btn btn-card" %>
         </div>
       </div>
     </div>
     <% end %>
   </div>
+</div>

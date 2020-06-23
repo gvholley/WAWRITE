@@ -64,6 +64,7 @@ h5, p {
 
 .tag {
   color: black;
+  font-style: italic;
 }
 
 .tag a {
@@ -71,4 +72,33 @@ h5, p {
   color: black;
 }
 
+.btn-card {
+  background-color: $red;
+  border-color: $red;
+  border-radius: 8px;
+  color: white;
+  font-family: 'Lato', sans-serif;
+}
 
+.btn-card:hover {
+  background-color: $red;
+  border-color: $red;
+  color: white;
+  font-family: 'Lato', sans-serif;
+}
+
+.imgborder {
+  border: 1px solid black;
+  padding: 5px;
+  background-color: black;
+}
+
+.checkoutborder {
+  border: 5px solid black;
+  margin-top: 30px;
+  background-color: white;
+}
+
+.pricetag {
+  font-size: 24px;
+}

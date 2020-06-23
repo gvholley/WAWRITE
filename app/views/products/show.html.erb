@@ -1,24 +1,24 @@
 <div class="container py-3">
   <div class="row">
-    <div class="col-sm-12 col-md-6">
+    <div class="col-sm-12 col-md-6 imgborder">
       <%= image_tag(@product.photo_url, width: '100%') %>
     </div>
     <div class="col-sm-12 col-md-6">
       <h1><%= @product.name %></h1>
-      <p>Some awesome description.</p>
-      <p><%= humanized_money_with_symbol(@product.price) %></p>
+      <p><%= @product.description %></p>
+      <p class="pricetag"><%= humanized_money_with_symbol(@product.price) %></p>
       <%= form_tag orders_path do %>
       <%= hidden_field_tag 'product_id', @product.id %>
-      <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
+      <%= submit_tag 'Purchase', class: 'btn btn-card' %>
 <% end %>
-<div class="tag">
+<!--<div class="tag">
 <p>Find more in
 <% @product.tag_list.each do |tag| %>
           <%= link_to tag, tagged_path(tag: tag) %>
 
         <% end %>
       </p>
-    </div>
+    </div> -->
     </div>
   </div>
 </div>
