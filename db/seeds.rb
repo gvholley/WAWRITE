@@ -38,4 +38,19 @@ mt is a lot easier and simpler than changing your room
 with paint and wall paper.", photo_url: 'https://www.masking-tape.jp/en/common/images/lineup/special/casa/mtcasashade/sizemainimg2.jpg')
 mtc.tag_list.add("Tape")
 mtc.save
+
+mdd = Product.create!(price_cents: 2499, sku: 'mdd', name: 'Midori Five Year Diary', category: diary, description: "With this clever and charming diary, you can record the day's events and remember those of previous years at the same time. It features a separate page for each day of the year, and each page is divided into five sections for you to fill in on the same date over five successive years. You can write about events, musings, or even the weather. And if you don't want to write about anything on some days, that's fine too! After you've used the diary for a full year, you can go back to the first page and read what was happening in your life on the same date a year ago as you make a new entry on the same page. A prologue section at the beginning of the diary gives you space to mark down your thoughts and hopes at the beginning of each year.", photo_url: 'https://i.imgur.com/zbfshEe.jpg')
+mdd.tag_list.add("Diary")
+mdd.save
+
+kl = Product.create!(price_cents: 2999, sku: 'kl', name: 'Kaweco Liliput', category: pen, description: "The Kaweco Liliput pen is incredibly slim yet sturdy—perfect for taking on the go in your pocket or pen case! Threading on the end of the barrel allows the cap to be screwed on securely, bringing the pen to a comfortable, full-sized length while in use. It can be used with a wide variety of refills, listed under Recommended Refills/Parts.
+This pen is constructed from lead-free Eco Brass that will darken and change color over time as the brass oxidizes, acquiring a natural antique character.", photo_url: 'https://i.imgur.com/3hU0kjD.jpg')
+kl.tag_list.add("Pen")
+kl.save
+
+mkk = Product.create!(price_cents: 399, sku: 'mkk', name: 'Mikoka Masking Tape', category: tape, description: "The adhesive force of a washi tape is a compromise between two opposing properties: adhesive ability and removability. If a heavy-duty packaging tape is needed then the use of a washi tape is not the best choice. Nevertheless, MIKOKA washi tapes are excellent for light-duty packaging. The adhesive ability may be improved by carefully selecting the type of packaging material, using clean, dry hands to apply and by letting the tape adhere to the surface without disturbance.
+There are millions of uses of washi tapes. Among them are decorating scrapbooks and calendars, differentiating keys, dishes, cups, personal items and practically any other type of decoration or identification. Lots of Washi tape project ideas can be found online. Get creative!", photo_url: 'https://i.imgur.com/i5gsPew.jpg')
+mkk.tag_list.add("Tape")
+mkk.save
+
 puts 'Finished!'
