@@ -1,39 +1,39 @@
 <div class="container">
 
-<div id="demo" class="carousel slide" data-ride="carousel" data-interval="4500">
+  <div id="demo" class="carousel slide" data-ride="carousel" data-interval="4500">
 
-  <!-- Indicators -->
-  <ul class="carousel-indicators">
-    <li data-target="#demo" data-slide-to="0" class="active"></li>
-    <li data-target="#demo" data-slide-to="1"></li>
-    <li data-target="#demo" data-slide-to="2"></li>
-  </ul>
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
 
-  <!-- The slideshow -->
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <a href="/products/31">
-      <%= image_tag "wawritecarousel1.png", class: "d-block w-100" %>
-      </a>
-    </div>
-    <div class="carousel-item">
-      <a href="/products/32">
-      <%= image_tag "wawritecarousel2.png", class: "d-block w-100" %>
-      </a>
-    </div>
-    <div class="carousel-item">
-      <a href="/products/34">
-      <%= image_tag "wawritecarousel3.png", class: "d-block w-100" %>
-      </a>
-    </div>
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <a href="/products/31">
+          <%= image_tag "wawritecarousel1.png", class: "d-block w-100" %>
+        </a>
+      </div>
+      <div class="carousel-item">
+        <a href="/products/32">
+          <%= image_tag "wawritecarousel2.png", class: "d-block w-100" %>
+        </a>
+      </div>
+      <div class="carousel-item">
+        <a href="/products/34">
+          <%= image_tag "wawritecarousel3.png", class: "d-block w-100" %>
+        </a>
+      </div>
       <a class="carousel-control-prev" href="#demo" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </a>
-  <a class="carousel-control-next" href="#demo" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </a>
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
   </div>
-</div>
 
 
 
@@ -42,18 +42,21 @@
   <h1>Featured Products</h1>
   <div class="row">
     <% @products.each do |product| %>
+
     <div class="col-6 col-md-4">
+      <%= link_to product_path(product) do %>
       <div class="card">
         <%= image_tag product.photo_url , class: "card-img-top" %>
+        <% end %>
         <div class="card-body">
           <h5 class="card-title"><%= product.name %></h5>
           <p><%= humanized_money_with_symbol(product.price) %></p>
           <p class="card-text">
             <div class='tag'>
-        <% product.tag_list.each do |tag| %>
-          <%= link_to tag, tagged_path(tag: tag) %>
-        <% end %>
-      </div>
+              <% product.tag_list.each do |tag| %>
+              <%= link_to tag, tagged_path(tag: tag) %>
+              <% end %>
+            </div>
           </p>
           <%= link_to "More details", product_path(product), class: "btn btn-primary" %>
         </div>
