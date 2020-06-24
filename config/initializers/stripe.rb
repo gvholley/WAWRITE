@@ -1,5 +1,5 @@
 Rails.configuration.stripe = {
-  publishable_key: ENV['STRIPE_PUBLISHABLE_KEY'],
+  Stripe.setPublishableKey("pk_test_51Guw15LBsMZeYb07DWNl1rr2X575otShpRvR4wnRKbZ7xYLoGKKFe5hyro9OARbQdmAfhANnxXYx7s03HcMoPPBl00Q2NLihdQ"),
   secret_key:      ENV['STRIPE_SECRET_KEY'],
   signing_secret:  ENV['STRIPE_WEBHOOK_SECRET_KEY']
 }
